@@ -1,0 +1,4 @@
+- path doesn't exist
+- not enough permisson
+- file is to big
+- folder is empty

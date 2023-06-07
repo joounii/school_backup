@@ -6,9 +6,13 @@ create_backup () {
     date_time=$(date +"%F"_"%T" | sed 's/:/-/g')
     new_folder_path=$backup_folder/$date_time
 
-    mkdir $new_folder_path
+    mkdir $new_folder_path || error_handling
 
-    cp -r $folder_to_copy $new_folder_path
+    cp -r $folder_to_copy $new_folder_path || error_handling
 
     echo "$(cyan "Finished backup")"
+}
+
+error_handling () {
+    echo "$(red "There was an error while trying to create the backup")"
 }

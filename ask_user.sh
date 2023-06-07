@@ -1,5 +1,5 @@
 get_backup_folder () {
-    read -p "$(yellow "Please enter the path where you want to safe your backup: ")" backup_folder
+    read -ep "$(yellow "Please enter the path where you want to safe your backup: ")" backup_folder
 
     if [ -d "$backup_folder" ];
     then
@@ -11,7 +11,7 @@ get_backup_folder () {
 }
 
 get_folder_to_copy () {
-    read -p "$(yellow "Please enter the path to the folder you want to create a backup of: ")" folder_to_copy
+    read -ep "$(yellow "Please enter the path to the folder you want to create a backup of: ")" folder_to_copy
 
     if [ -d "$folder_to_copy" ];
     then
