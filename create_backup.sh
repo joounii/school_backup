@@ -15,4 +15,5 @@ create_backup () {
 
 error_handling () {
     echo "$(red "There was an error while trying to create the backup")"
+    exit 1
 }
